@@ -27,7 +27,7 @@ BEGIN
        On parcoure la phrase avec une boucle
        Dès qu'il rencontre le caractère " ", il incrémente le compteur*/
     
-    FOR i FROM 0 TO maPhrase.lenght-1 DO
+    FOR i FROM 0 TO maPhrase.lenght DO
         WHILE (caracterePhrase = ' ') DO
             compteurMots :=compteurMots + 1;
         END_WHILE
