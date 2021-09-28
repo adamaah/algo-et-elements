@@ -1,0 +1,47 @@
+ALGORITHM lecture_phrase
+VAR 
+    compteurCaracteres, compteurMots, compteurVoyelles : INTEGER :=0; 
+    maPhrase, : FLOAT;
+    caracterePhrase, i : INTEGER;
+
+
+BEGIN 
+    Read(maPhrase)
+
+    /* Determiner longueur phrase 
+       On initialise une boucle qui va parcourir la phrase.
+       On comptabilise caractére par caractére de la phrase. 
+       L'opération s'arrêtera s'il rencontre un point */
+
+
+    FOR i FROM 0 TO maPhrase.lenght-1  DO
+        WHILE (caracterePhrase <> '.') DO
+            compteurCaracteres := compteurCaracteres + 1;
+        END_WHILE
+    END_FOR
+
+
+
+
+    /* Determiner le nombre de mot de la phrase 
+       On parcoure la phrase avec une boucle
+       Dès qu'il rencontre le caractère " ", il incrémente le compteur*/
+    
+    FOR i FROM 0 TO maPhrase.lenght-1 DO
+        WHILE (caracterePhrase = ' ') DO
+            compteurMots :=compteurMots + 1;
+        END_WHILE
+    END_FOR
+
+
+
+
+    /* Determiner le nombre de voyelles dans la phrase 
+       On initialise une boucle qui va parcourir la phrase.
+       Si une caratere est une voyelle, il l'ajoute à notre compteur*/
+
+    FOR i FROM 0 TO maPhrase.lenght-1  DO
+        IF (caracterePhrase = voyelle) THEN
+            compteurVoyelles != compteurVoyelles + 1;
+        END_IF
+    END_FOR
