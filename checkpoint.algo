@@ -1,8 +1,9 @@
 ALGORITHM lecture_phrase
 VAR 
     compteurCaracteres, compteurMots, compteurVoyelles : INTEGER :=0; 
-    maPhrase, : FLOAT;
-    caracterePhrase, i : INTEGER;
+    maPhrase : STRING;
+    caracterePhrase : CHAR;
+    i : INTEGER;
 
 
 BEGIN 
@@ -41,7 +42,7 @@ BEGIN
        Si une caratere est une voyelle, il l'ajoute à notre compteur*/
 
     FOR i FROM 0 TO maPhrase.lenght-1  DO
-        IF (caracterePhrase = voyelle) THEN
-            compteurVoyelles != compteurVoyelles + 1;
+        IF (maPhrase[i] = "i" OR maPhrase[i] = "u" OR maPhrase[i] = "o" OR maPhrase[i] = "a" OR maPhrase[i] = "e") THEN
+            compteurVoyelles := compteurVoyelles + 1;
         END_IF
     END_FOR
