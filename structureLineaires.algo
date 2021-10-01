@@ -82,12 +82,12 @@ BEGIN
         
         FOR j FROM 0 TO hashTableEnsemble2 DO
             IF (hashTableEnsemble1.value[i] = hashTableEnsemble2.value[j]) THEN
-                sum = sum + hashTableEnsemble2.value[j];
+                sum = hashTableEnsemble1.value[i] + hashTableEnsemble2.value[j];
             END_IF
         END_FOR
 
         IF (hashTableEnsemble2.value[j] = hashTableEnsemble1.value[i]) THEN
-                sum = sum + hashTableEnsemble1.value[i];
+                sum = sum + hashTableEnsemble1.value[i] + hashTableEnsemble2.value[j];
             END_IF
 
     END_FOR
