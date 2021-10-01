@@ -1,0 +1,95 @@
+ALGORITHM Structure
+
+
+/*Déclaration de variables */
+VAR 
+    ensemble1 : ARRAY_OF INTEGER[5];
+    ensemble2 ! ARRAY_OF INTEGER[5];
+    sum : INTEGER :=0;
+    i,j : INTEGER;
+    hashTableEnsemble1 : HASH_TABLE <INTEGER, INTEGER>;
+    hashTableEnsemble2 : HASH_TABLE <INTEGER, INTEGER>;
+    count : INTEGER :=1;
+
+
+
+/*Corps de l'algo */
+BEGIN
+
+    Read(ensemble1)
+    Read(ensemble2)
+
+
+
+    /*Problème 1, Solution 1 */
+    FOR i FROM 0 TO ensemble1.lenght-1 TO max DO
+
+        FOR j FROM 0 TO ensemble2.lenght-1 DO
+            
+            IF (ensemble1[i] <> ensemble2[j]) THEN
+                sum = sum + ensemble1[i];
+                j = j +1;
+            END_IF
+
+        END_FOR
+
+        IF (ensemble2[j] = ensemble1[i]) THEN
+                sum = sum + ensemble2[j];
+                i = i +1;
+            END_IF
+        
+    END_FOR
+
+
+    /*Probleme 1, Solution 2*/
+    FOR i FROM 0 TO hashTableEnsemble1 DO
+        
+        FOR j FROM 0 TO hashTableEnsemble2 DO
+            IF (hashTableEnsemble1.value[i] = hashTableEnsemble2.value[j]) THEN
+                sum = sum + hashTableEnsemble2.value[j];
+            END_IF
+        END_FOR
+
+        IF (hashTableEnsemble2.value[j] = hashTableEnsemble1.value[i]) THEN
+                sum = sum + hashTableEnsemble1.value[i];
+            END_IF
+
+    END_FOR
+
+
+
+
+    /*Problème 2, solution 1 */
+    FOR i FROM 0 TO ensemble1.lenght-1 TO max DO
+
+        FOR j FROM 0 TO ensemble2.lenght-1 DO
+            
+            IF (ensemble1[i] = ensemble2[j]) THEN
+                sum = ensemble1[i] + ensemble2[j];
+                j = j +1;
+            END_IF
+
+        END_FOR
+
+        print(sum)
+        
+    END_FOR
+
+
+
+    /*Problème 2, Solution 2 */
+    FOR i FROM 0 TO hashTableEnsemble1 DO
+        
+        FOR j FROM 0 TO hashTableEnsemble2 DO
+            IF (hashTableEnsemble1.value[i] = hashTableEnsemble2.value[j]) THEN
+                sum = sum + hashTableEnsemble2.value[j];
+            END_IF
+        END_FOR
+
+        IF (hashTableEnsemble2.value[j] = hashTableEnsemble1.value[i]) THEN
+                sum = sum + hashTableEnsemble1.value[i];
+            END_IF
+
+    END_FOR
+
+    
