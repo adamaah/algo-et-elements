@@ -21,9 +21,9 @@ BEGIN
 
 
     /*Problème 1, Solution 1 */
-    FOR i FROM 0 TO ensemble1.lenght-1 TO max DO
+    FOR i FROM 0 TO ensemble1.length-1 TO max DO
 
-        FOR j FROM 0 TO ensemble2.lenght-1 DO
+        FOR j FROM 0 TO ensemble2.length-1 DO
             
             IF (ensemble1[i] <> ensemble2[j]) THEN
                 sum = sum + ensemble1[i];
@@ -42,7 +42,7 @@ BEGIN
 
     /*Probleme 1, Solution 2*/
 
-    a = hashTableEnsemble1.lenght
+    a = hashTableEnsemble1.length
     FOR i FROM 0 TO a-1 DO
         x = hashTableEnsemble1[j]
         IF (hashTableEnsemble2.search[x] == false) THEN
@@ -51,7 +51,7 @@ BEGIN
     END_FOR
 
 
-    b = hashTableEnsemble2.lenght
+    b = hashTableEnsemble2.length
     FOR j FROM 0 TO b-1 DO
         y = hashTableEnsemble2[j]
         IF (hashTableEnsemble1.search[y] == false) THEN
@@ -63,9 +63,9 @@ BEGIN
 
 
     /*Problème 2, solution 1 */
-    FOR i FROM 0 TO ensemble1.lenght-1 TO max DO
+    FOR i FROM 0 TO ensemble1.length-1 TO max DO
 
-        FOR j FROM 0 TO ensemble2.lenght-1 DO
+        FOR j FROM 0 TO ensemble2.length-1 DO
             
             IF (ensemble1[i] = ensemble2[j]) THEN
                 sum = ensemble1[i] + ensemble2[j];
@@ -81,7 +81,7 @@ BEGIN
 
     /*Problème 2, Solution 2 */
 
-    a = hashTableEnsemble1.lenght
+    a = hashTableEnsemble1.length
     FOR i FROM 0 TO a-1 DO
         x = hashTableEnsemble1[j]
         IF (hashTableEnsemble2.search[x] == true) THEN
@@ -90,7 +90,7 @@ BEGIN
     END_FOR
 
 
-    b = hashTableEnsemble2.lenght
+    b = hashTableEnsemble2.length
     FOR j FROM 0 TO b-1 DO
         y = hashTableEnsemble2[j]
         IF (hashTableEnsemble1.search[y] == true) THEN
