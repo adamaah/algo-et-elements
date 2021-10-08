@@ -21,21 +21,25 @@ BEGIN
 
 
     /*Problème 1, Solution 1 */
-    FOR i FROM 0 TO ensemble1.length-1 DO
+    FOR i FROM 0 TO ensemble1.lenght-1  DO
 
-        FOR j FROM 0 TO ensemble2.length-1 DO
-            
+        FOR j FROM 0 TO ensemble2.lenght-1  DO
+
             IF (ensemble1[i] <> ensemble2[j]) THEN
-                sum = sum + ensemble1[i];
+                tamp = ensemble1[i];
+
+            END_IF
+
+            find = ensemble2[i]
+
+            IF (tamp == find) THEN
+                sum = sum + tamp;
             END_IF
 
         END_FOR
 
-        IF (ensemble2[j] <> ensemble1[i]) THEN
-                sum = sum + ensemble2[j];
-            END_IF
-        
     END_FOR
+
 
 
     /*Probleme 1, Solution 2*/
