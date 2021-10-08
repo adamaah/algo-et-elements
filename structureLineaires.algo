@@ -21,20 +21,18 @@ BEGIN
 
 
     /*Problème 1, Solution 1 */
-    FOR i FROM 0 TO ensemble1.length-1 TO max DO
+    FOR i FROM 0 TO ensemble1.length-1 DO
 
         FOR j FROM 0 TO ensemble2.length-1 DO
             
             IF (ensemble1[i] <> ensemble2[j]) THEN
                 sum = sum + ensemble1[i];
-                j = j +1;
             END_IF
 
         END_FOR
 
         IF (ensemble2[j] <> ensemble1[i]) THEN
                 sum = sum + ensemble2[j];
-                i = i +1;
             END_IF
         
     END_FOR
