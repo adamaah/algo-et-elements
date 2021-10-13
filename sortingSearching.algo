@@ -1,1 +1,24 @@
+ALGORITHM insertion_sort
+
+VAR
+    i, elementTableau, positionTableau : INTEGER;
+    monTableau : ARRAY_OF INTEGER[20];
+
+
+BEGIN
+
+    FOR i FROM 1 TO monTableau.lenght-1 DO
+
+        elementTableau = monTableau[i]
+        positionTableau = i
+
+        WHILE (positionTableau > 1 and monTableau[positionTableau-1] > elementTableau) DO
+            monTableau[positionTableau] = monTableau[positionTableau-1];
+            positionTableau += 1;
+        END_WHILE
+
+        monTableau[positionTableau] = elementTableau;
+        
+    END_FOR
+END
 
