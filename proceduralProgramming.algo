@@ -1,1 +1,61 @@
 
+/*Procedure pour calculer le produit scalaire */
+PROCEDURE dot_product(VAR vecteur1, vecteur2 : ARRAY_OF INTEGER[2];)
+
+VAR
+    i, j, calculScalaire: INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO vecteur1.lenght-1 DO
+        FOR j FROM 0 TO vecteur2.lenght-1 DO
+            calculScalaire = vecteur1[i]*vecteur2[i]
+        END_FOR
+    END_FOR
+END
+
+
+
+/*Function pour calculer le produit scalaire */
+FUNCTION fonction_dot_product(VAR vecteurA, vecteurB : ARRAY_OF INTEGER[2]) : INTEGER
+
+VAR
+    i, j, calculScalaire : INTEGER
+
+BEGIN
+    FOR i FROM 0 TO vecteurA.lenght-1 DO
+        FOR j FROM 0 TO vecteurB.lenght-1 DO
+            calculScalaire = vecteurA[i]*vecteurB[i]
+        END_FOR
+    END_FOR
+
+    RETURN calculScalaire ;
+END
+
+
+
+/*Algorithme pour déterminer si les vecteurs sont orthogonaux */
+ALGORITHM proceduralProgramming
+
+VAR
+    monvecteur1, monvecteur2 :ARRAY_OF INTEGER[2];
+
+
+BEGIN
+
+    /*si on utilise la procédure*/
+    IF (dot_product(monvecteur1, monvecteur2) == 0) THEN
+        Write('Les deux vecteurs sont orthogonaux')
+    ELSE
+        Write('Les deux vecteurs ne sont pas orthogonaux')
+    END_IF
+
+
+    /*si on utilise la fonction*/
+    IF (fonction_dot_product(monvecteur1, monvecteur2) == 0) THEN
+        Write('Les deux vecteurs sont orthogonaux')
+    ELSE
+        Write('Les deux vecteurs ne sont pas orthogonaux')
+    END_IF
+
+
+END
